@@ -115,6 +115,13 @@ switch (true){
         body{
             padding: 30px;
         }
+        .btnn {
+            padding-top: 50px;
+        }
+        button {
+            box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+
+        }
     </style>
 </head>
 <body>
@@ -147,6 +154,9 @@ switch (true){
                 ?>
             </tbody>
             </table>
+        </div>
+        <div class="col text-center btnn">
+            <a href="index.php"><button type="submit" class="btn btn-primary btt">Kembali</button></a>
         </div>
     </div>
 </body>
