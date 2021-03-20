@@ -1,82 +1,39 @@
 <?php 
 $nama=$_POST['nama'];
-$nim=$_POST['nim'];
+$matkul=$_POST['matkul'];
 $uts=$_POST['uts'];
 $uas=$_POST['uas'];
 $tugas=$_POST['tugas'];
 ?>
 
 <?php
-// Grade Nilai UTS
-if ($uts >= 85 && $uts <= 100){
-    $grade_uts='A';
-}
-elseif ($uts >= 70 && $uts <= 84){
-    $grade_uts='B';
-}
-elseif ($uts >= 56 && $uts <= 69){
-    $grade_uts='C';
-}
-elseif ($uts >= 36 && $uts <= 55){
-    $grade_uts='D';
-}
-elseif ($uts >= 0 && $uts <= 35){
-    $grade_uts='E';
-}
-else {
-    $grade_uts='I';
-}
-
-
-// Grade Bilai UAS
-if ($uas >= 85 && $uas <= 100){
-    $grade_uas='A';
-}
-elseif ($uas >= 70 && $uas <= 84){
-    $grade_uas='B';
-}
-elseif ($uas >= 56 && $uas <= 69){
-    $grade_uas='C';
-}
-elseif ($uas >= 36 && $uas <= 55){
-    $grade_uas='D';
-}
-elseif ($uas >= 0 && $uas <= 35){
-    $grade_uas='E';
-}
-else {
-    $grade_uas='I';
-}
-
-
-// Grade Nilai Tugas/Praktikum
-if ($tugas >= 85 && $tugas <= 100){
-    $grade_tugas='A';
-}
-elseif ($tugas >= 70 && $tugas <= 84){
-    $grade_tugas='B';
-}
-elseif ($tugas >= 56 && $tugas <= 69){
-    $grade_tugas='C';
-}
-elseif ($tugas >= 36 && $tugas <= 55){
-    $grade_tugas='D';
-}
-elseif ($tugas >= 0 && $tugas <= 35){
-    $grade_tugas='E';
-}
-else {
-    $grade_tugas='I';
-}
-
-
-// Keterangan Nilai Akhir
 $nilai_akhir = (30*$uts/100 + 35*$uas/100 + 35*$tugas/100);
 if ($nilai_akhir >= 55 && $nilai_akhir <= 100){
     $grade_na='Lulus';
 }else {
     $grade_na='Tidak Lulus';
 }
+
+// Grade Nilai Akhir
+if ($nilai_akhir >= 85 && $nilai_akhir <= 100){
+    $grade_nilai='A';
+}
+elseif ($nilai_akhir >= 70){
+    $grade_nilai='B';
+}
+elseif ($nilai_akhir >= 56){
+    $grade_nilai='C';
+}
+elseif ($nilai_akhir >= 36){
+    $grade_nilai='D';
+}
+elseif ($nilai_akhir >= 0){
+    $grade_nilai='E';
+}
+else {
+    $grade_nilai='I';
+}
+
 ?>
 
 
@@ -109,11 +66,12 @@ if ($nilai_akhir >= 55 && $nilai_akhir <= 100){
                 <tr>
                 <th>NO</th>
                 <th>Nama</th>
-                <th>NIM</th>
+                <th>Mata Kuliah</th>
                 <th>UTS</th>
                 <th>UAS</th>
                 <th>Tugas</th>
                 <th>Nilai Akhir</th>
+                <th>Keterangan</th>
                 </tr>
             </thead>
             <tbody>
@@ -122,17 +80,19 @@ if ($nilai_akhir >= 55 && $nilai_akhir <= 100){
                     echo '<tr>
                     <td>'.$nomor.'</td>';
                     echo '<td>'.$nama.'</td>';
-                    echo '<td>'.$nim.'</td>';
-                    echo '<td>'.$grade_uts.'</td>';
-                    echo '<td>'.$grade_uas.'</td>';
-                    echo '<td>'.$grade_tugas.'</td>';
-                    echo '<td>'.$grade_na.' '.'('.number_format($nilai_akhir,2,',','.').')'.'</td>';
+                    echo '<td>'.$matkul.'</td>';
+                    echo '<td>'.$uts.'</td>';
+                    echo '<td>'.$uas.'</td>';
+                    echo '<td>'.$tugas.'</td>';
+                    echo '<td>'.$nilai_akhir.'</td>';
+                    echo '<td>'.$grade_nilai.'</td>';
                     echo '</tr>';
                 ?>
             </tbody>
             </table>
         </div>
-        <div class="col text-center btnn">
+        <?php echo '<h5>'.strtoupper($nama).' DINYATAKAN:</h5>'.$grade_na;  ?>
+        <div class="col text-right btnn">
             <a href="index.php"><button type="submit" class="btn btn-primary btt">Kembali</button></a>
         </div>
     </div>
