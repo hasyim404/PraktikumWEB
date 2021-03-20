@@ -98,6 +98,7 @@ switch (true){
             </tbody>
             </table>
         </div>
+        <?php echo '<h5>'.strtoupper($nama).' DINYATAKAN:</h5>'.$grade_na;  ?>
         <div class="col text-right btnn">
             <a href="index.php"><button type="submit" class="btn btn-primary btt">Kembali</button></a>
         </div>
