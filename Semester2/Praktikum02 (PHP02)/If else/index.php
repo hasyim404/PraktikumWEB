@@ -48,8 +48,21 @@
                 <input type="text" class="form-control" name="nama" required placeholder="Nama">
             </div>
             <div class="form-group">
-                <label>NIM</label>
-                <input type="text" class="form-control" name="nim" required placeholder="NIM">
+                <label>Mata Kuliah</label>
+                    <div class="col-md-4">
+                        <select class="form-select" name="matkul" aria-label="" required>
+                        <option selected></option>
+                        <option value="PPKN">PPKN</option>
+                        <option value="Bahasa Inggris">Bahasa Inggris</option>
+                        <option value="Keterampilan Komunikasi">Keterampilan Komunikasi</option>
+                        <option value="Statistik">Statistik</option>
+                        <option value="Basis Data">Basis Data</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Pemrograman Web 2">Pemrograman Web 2</option>
+                        <option value="Jaringan Komputer">Jaringan Komputer</option>
+                    </div>
+                </div>
+                </select>
             </div>
             <div class="d-flex justify-content-center">
                 <div class="form-group mid">
