@@ -87,9 +87,7 @@ if ($nilai_akhir >= 55 && $nilai_akhir <= 100){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Nilai Siswa</title>
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
         body{
             padding: 30px;
@@ -98,8 +96,8 @@ if ($nilai_akhir >= 55 && $nilai_akhir <= 100){
 </head>
 <body>
     <div class="container">
-        <div class="well">
-            <table class="table">
+        <div class="table-responsive">
+            <table class="table table-default table-hover">
             <thead>
                 <tr>
                 <th>NO</th>
