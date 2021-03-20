@@ -1,97 +1,13 @@
 <?php 
 $nama=$_POST['nama'];
-$nim=$_POST['nim'];
+$matkul=$_POST['matkul'];
 $uts=$_POST['uts'];
 $uas=$_POST['uas'];
 $tugas=$_POST['tugas'];
 ?>
 
 <?php
-// Case UTS
-switch (true){
-    case ($uts >= 85 && $uts <= 100):
-        $grade_uts = 'A';
-        $predikat_uts = 'Sangat Memuaskan';
-        break;
-    case ($uts >= 70 && $uts <= 84):
-        $grade_uts = 'B';
-        $predikat_uts = 'Memuaskan';
-        break;
-    case ($uts >= 56 && $uts <= 69):
-        $grade_uts = 'C';
-        $predikat_uts = 'Cukup';
-        break;
-    case ($uts >= 36 && $uts <= 55):
-        $grade_uts = 'D';
-        $predikat_uts = 'Kurang';
-        break;
-    case ($uts >= 0 && $uts <= 35):
-        $grade_uts = 'E';
-        $predikat_uts = 'Sangat Kurang';
-        break;
-    default:
-        $grade_uts = 'I';
-        $predikat_uts = 'error';
-}
-
-
-// Case UAS
-switch (true){
-    case ($uas >= 85 && $uas <= 100):
-        $grade_uas = 'A';
-        $predikat_uas = 'Sangat Memuaskan';
-        break;
-    case ($uas >= 70 && $uas <= 84):
-        $grade_uas = 'B';
-        $predikat_uas = 'Memuaskan';
-        break;
-    case ($uas >= 56 && $uas <= 69):
-        $grade_uas = 'C';
-        $predikat_uas = 'Cukup';
-        break;
-    case ($uas >= 36 && $uas <= 55):
-        $grade_uas = 'D';
-        $predikat_uas = 'Kurang';
-        break;
-    case ($uas >= 0 && $uas <= 35):
-        $grade_uas = 'E';
-        $predikat_uas = 'Sangat Kurang';
-        break;
-    default:
-        $grade_uas = 'I';
-        $predikat_uas = 'error';
-}
-
-
-// Case Tugas/Praktikum
-switch (true){
-    case ($tugas >= 85 && $tugas <= 100):
-        $grade_tugas = 'A';
-        $predikat_tugas = 'Sangat Memuaskan';
-        break;
-    case ($tugas >= 70 && $tugas <= 84):
-        $grade_tugas = 'B';
-        $predikat_tugas = 'Memuaskan';
-        break;
-    case ($tugas >= 56 && $tugas <= 69):
-        $grade_tugas = 'C';
-        $predikat_tugas = 'Cukup';
-        break;
-    case ($tugas >= 36 && $tugas <= 55):
-        $grade_tugas = 'D';
-        $predikat_tugas = 'Kurang';
-        break;
-    case ($tugas >= 0 && $tugas <= 35):
-        $grade_tugas = 'E';
-        $predikat_tugas = 'Sangat Kurang';
-        break;
-    default:
-        $grade_tugas = 'I';
-        $predikat_tugas = 'error';
-}
-
-
-// Case Nilai Akhir
+// Nilai Akhir
 $nilai_akhir = (30*$uts/100 + 35*$uas/100 + 35*$tugas/100);
 switch (true){
     case ($nilai_akhir >= 55 && $nilai_akhir <= 100):
@@ -100,8 +16,33 @@ switch (true){
     default:
     $grade_na='Tidak Lulus';
 }
+// Case UTS
+switch (true){
+    case ($nilai_akhir >= 85 && $nilai_akhir <= 100):
+        $grade_akhir = 'A';
+        $predikat_akhir = '<i>Sangat Memuaskan</i>';
+        break;
+    case ($nilai_akhir >= 70):
+        $grade_akhir = 'B';
+        $predikat_akhir = '<i>Memuaskan</i>';
+        break;
+    case ($nilai_akhir >= 56):
+        $grade_akhir = 'C';
+        $predikat_akhir = '<i>Cukup</i>';
+        break;
+    case ($nilai_akhir >= 36):
+        $grade_akhir = 'D';
+        $predikat_akhir = '<i>Kurang</i>';
+        break;
+    case ($nilai_akhir >= 0):
+        $grade_akhir = 'E';
+        $predikat_akhir = '<i>Sangat Kurang</i>';
+        break;
+    default:
+        $grade_akhir = 'I';
+        $predikat_akhir = 'Tidak Ada';
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -137,6 +78,7 @@ switch (true){
                 <th>UAS</th>
                 <th>Tugas</th>
                 <th>Nilai Akhir</th>
+                <th>Keterangan</th>
                 </tr>
             </thead>
             <tbody>
@@ -145,17 +87,18 @@ switch (true){
                     echo '<tr>
                     <td>'.$nomor.'</td>';
                     echo '<td>'.$nama.'</td>';
-                    echo '<td>'.$nim.'</td>';
-                    echo '<td>'.$grade_uts.' (<i>'.$predikat_uts.'</i>)'.'</td>';
-                    echo '<td>'.$grade_uas.' (<i>'.$predikat_uas.'</i>)'.'</td>';
-                    echo '<td>'.$grade_tugas.' (<i>'.$predikat_tugas.'</i>)'.'</td>';
-                    echo '<td>'.$grade_na.' '.'('.number_format($nilai_akhir,2,',','.').')'.'</td>';
+                    echo '<td>'.$matkul.'</td>';
+                    echo '<td>'.$uts.'</td>';
+                    echo '<td>'.$uas.'</td>';
+                    echo '<td>'.$tugas.'</td>';
+                    echo '<td>'.number_format($nilai_akhir,2,',','.').'</td>';
+                    echo '<td>'.$grade_akhir.' ('.$predikat_akhir.')'.'</td>';
                     echo '</tr>';
                 ?>
             </tbody>
             </table>
         </div>
-        <div class="col text-center btnn">
+        <div class="col text-right btnn">
             <a href="index.php"><button type="submit" class="btn btn-primary btt">Kembali</button></a>
         </div>
     </div>
