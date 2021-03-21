@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validation</title>
+</head>
+<body>
+	<form method="POST" action="#">
+		<fieldset>
+			<legend>Form Validasi</legend>
+			Nama Pelanggan:
+			<input type="text" maxlength="30" id="nama" placeholder="Nama" required><br/><br/>
+			Email: 
+			<input type="email" id="email" required placeholder="yourname@example.com" size="32"><br/><br/>
+			Jam Keberangkatan: 
+			<input type="time" id="jam" required><br/><br/>
+			Tujuan Keberangkatan: 
+			<input type="text" id="tujuan" required><br/><br/>
+			Jumlah Tiket: 
+			<input type="number" id="tiket" min="1" max="10"><br/><br/>
+			<button type="submit" id="btn">Submit</button>
+		</fieldset>
+	</form>
+</body>
+<script>
+</script>
+</html>

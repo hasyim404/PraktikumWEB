@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kurs Rupiah</title>
+        <meta charset="UTF-8">
+    </head>
+<body>
+    <fieldset style="background-color:  #ffffff;">
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+            <table cellpadding="4" border="1" >
+            <tr style="text-align: center;">
+                <td>Masukkan Nikai</td>
+                <td>valas</td>
+                <td>Nilai Rupiah</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="Masukkan nilai" onkeyup="kurs()" name="idr" id="idr">
+                </td>
+                <td>
+                    <select onchange="kurs()" id="kurs">
+                        <option value="1">Dollar US</option>
+                        <option value="2">Dollar Singapore</option>
+                        <option value="3">Ringgit Malaysia</option>
+                        <option value="4">Yen Jepang</option>
+                        <option value="5">Euro</option>
+                        <option value="6">Riyal Arab Saudi</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" placeholder="Nilai rupiah" id="rupiah">
+                </td>
+            </tr>
+            </table>
+    </fieldset>
+</body>
+<script>
+function kurs() {
+    let kur = document.getElementById("kurs").value;
+
+    if (kur == 1) {
+        input= document.getElementById("idr").value;
+        idr= 9.915;
+        jml= idr * input;
+        document.getElementById("rupiah").value=jml;
+    }
+    else if (kur == 2) {
+        input= document.getElementById("idr").value;
+        idr= 13.475;
+        jml= idr * input;
+        document.getElementById("rupiah").value=jml;
+    }
+    else if (kur == 3) {
+        input= document.getElementById("idr").value;
+        idr= 874;
+        jml= idr * input;
+        document.getElementById("rupiah").value=jml;
+    }
+    else if (kur == 4) {
+        input= document.getElementById("idr").value;
+        idr= 120;
+        jml= idr * input;
+        document.getElementById("rupiah").value=jml;
+    }
+    else if (kur == 5) {
+        input= document.getElementById("idr").value;
+        idr= 15.888;
+        jml= idr * input;
+        document.getElementById("rupiah").value=jml;
+    }
+    else if (kur == 6) {
+        input= document.getElementById("idr").value;
+        idr= 3.592;
+        jml= idr * input;
+        document.getElementById("rupiah").value=jml;
+    }
+}
+</script>
+</html>

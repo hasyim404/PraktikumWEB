@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body style="margin: 200px; margin-top: 0px;">
+    <select onchange="umbar();" id="pgambar" >
+        <option value="Screenshot (43).png">Pilih Gambar Anime</option>
+        <option value="Bofuri.jpg">Bofuri</option>
+        <option value="Dr-Stone.jpg">Dr.Stone</option>
+        <option value="Gintama.jpeg">Gintama</option>
+        <option value="Overlord.jpg">Overlord</option>
+        <option value="Slime Datta Ken.jpg">Slime Datta Ken</option>
+        <option value="Spirited Away.jpg">Spirited Away</option>
+    </select>
+    <img src="Screenshot (43).png" style="width: 100%" id="gambar">
+</body>
+<script>
+    function umbar() {
+        let gambar = document.getElementById("pgambar").value;
+        document.getElementById("gambar").src=gambar;
+        alert("Ini gambar anime " + gambar);
+    }
+</script>
+</html>

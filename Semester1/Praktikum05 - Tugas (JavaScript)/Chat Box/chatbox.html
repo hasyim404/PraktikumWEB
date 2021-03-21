@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Chat</title>
+</head>
+<body>
+	<div style="width: 100%;" id="isichat"></div>
+	<form method="POST" onsubmit="return kirim();">
+		<input id="pesan" style="width: 30%" type="text">
+		<button type="submit" onclick="return kirim();">Kirim Pesan</button>
+	</form>
+</body>
+<script>
+	function kirim() {
+		let pesan = document.getElementById("pesan").value;
+		document.getElementById("isichat").innerHTML += pesan + "<br/>";
+		document.getElementById("pesan").value = "";
+		return false;
+	}
+</script>
+</html>
