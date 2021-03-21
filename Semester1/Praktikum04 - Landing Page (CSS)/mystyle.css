@@ -1,0 +1,138 @@
+body{
+    font: 16px/28px times;
+    background-color: gainsboro;
+    color: black;
+}
+
+.box{
+    width: 1000px;
+    margin: auto;
+    background-color: #ffffff;
+    margin-top: -10px;
+}
+
+.header {
+    padding: 15px;
+    padding-bottom: 5px;
+}
+
+.header img {
+    width: 280px;
+    height: 120px;
+    margin-right: 10px;
+    margin-bottom: -25px;
+}
+
+.header ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0px;
+    overflow: hidden;
+    background-color:  teal;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative ;
+    width: 1000px;
+}
+
+.header li {
+    float: left;
+    margin-top: 25px;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+    line-height: 10px;
+    display: block;
+    text-align: center;
+    padding: 15px;
+}
+
+.header a:hover {
+    background-color: slategrey;
+    color: white;
+}
+
+.sim {
+    height: 500px;
+    background-image: url(foto/gambar2r.jpg);
+    background-size: cover;
+    background-position: 0px -60px;
+    border-top: 10px solid slategrey;
+    border-bottom: 8px solid slategrey;
+}
+
+.tentang h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
+
+.tentang {
+    width: 800px;
+    height: 300px;
+    margin: auto;
+    font-style: normal;
+    float: center;
+    text-align: justify;
+    background-color: thistle;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+video {
+    width: 500px;
+    margin: 2% 25%;
+    float: center;
+}
+
+.main h3{
+    margin: auto;
+    float: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.kotak1 {
+    float: left;
+    margin: auto;
+    background-color: cadetblue;
+    width: 20%;
+    text-align: left;
+    padding: 8px;
+    border: solid black 3px;
+}
+
+.kotak2 {
+    float: center;
+    margin: auto;
+    background-color: cadetblue;
+    width: 20%;
+    padding: 8px;
+    text-align: left;
+    border: solid black 3px;
+}
+
+.kotak3 {
+    float: right;
+    margin: auto;
+    background-color: cadetblue;
+    width: 20%;
+    padding: 8px;
+    text-align: left;
+    border: solid black 3px;
+}
+
+.footer {
+    background-color: #333333;
+    padding: 3px;
+}
+
+.footer .foot {
+    color: #eaeaea;
+    font-size: 12px;
+    text-align: center;
