@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Siswa</title>
+</head>
+<body style="background-color:#ebe7e0;">
+    <header style="background-color:#c6d4e1;">
+        <hr/>
+        <h1 style="text-align: center;">FORM REGISTRASI SISWA BARU</h1>
+        <hr/>
+    </header>
+    <form method="POST" action="akhir.html">
+    
+     <fieldset id="personal_information" style="background-color:  #ffffff;">
+        <legend><b>DATA DIRI</b></legend>
+         <ul>
+            <label for="name">Nama Lengkap: </label>
+            <input type="text" name="name" size="35" required
+                    autofocus placeholder="'Muhammad Ismail'">
+         </ul>
+         <ul>
+            <label for="ttl">Tempat Lahir: </label>
+            <input type="text" name="ttl" size="37" required>
+         </ul>
+         <ul>
+             <label for="tgl">Tanggal Lahir </label>
+             <input type="date" name="tgl" required>
+         </ul>
+         <ul>
+            <label for="pl">Jenis Kelamin: </label>
+            <input type="radio" name="pl" value="L" checked /> Laki-Laki
+            <input type="radio" name="pl" value="P" /> Perempuan
+        </ul>
+        <ul>
+            <label for="agama">Agama: </label>
+            <select>
+                <option value="">-----------Select-----------</option>
+                <option value="Buddha">Budha</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Khonghucu">Khonghucu</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Islam">Islam</option>
+                <option value="Protestan">Protestan</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+        </ul>
+         <ul>
+             <label for="email">Email: </label>
+             <input type="email" name="email" size="45"
+                    placeholder="'user@example.com'" required>
+         </ul>
+         <ul>
+             <label for="nope">No.Telepon</label>
+             <input type="text" name="nope" size="40" required>
+         </ul>    
+     </fieldset>
+     <fieldset id="personal_information" style="background-color:  #ffffff;">
+        <legend><b>DATA ALAMAT ASAL</b></legend>
+        <ul>
+            <label for="add">Alamat: </label>
+            <textarea name="add" rows="2" cols="34" required></textarea>
+        </ul>
+        <ul>
+            <label for="kode_pos">Kode Pos: </label>
+            <input type="text" name="kode_pos" size="10" required>
+        </ul>
+        <ul>
+            <label for="prov">Provinsi</label>
+            <select>
+                <option value="">-----------Select-----------</option>
+                <option value="aceh">Aceh</option>
+                <option value="sumut">Sumatera Utara</option>
+                <option value="sumbar">Sumatera Barat</option>
+                <option value="sumsel">Sumatera Selatan</option>
+                <option value="jabar">Jawa Barat</option>
+                <option value="jatim">Jawa Timur</option>
+                <option value="papua">Papua</option>
+                <option value="dll">*tidak satupun diatas</option>
+            </select>
+        </ul>
+        <ul>
+            <label for="kab">Kabupaten: </label>
+            <select>
+                <option value="">---------Select---------</option>
+                <option value="bogor">Bogor</option>
+                <option value="kabog">Kab. Bogor</option>
+                <option value="*lainnya">*tidak satupun diatas</option>
+            </select>
+        </ul>
+        <ul>
+            <label for="kec">Kecamatan: </label>
+            <select>
+                <option value="">---------Select---------</option>
+                <option value="parung">Parung</option>
+                <option value="lain">*tidak satupun diatas</option>
+            </select>
+        </ul>
+        <ul>
+            <input type="submit" name="submit" value="Submit data">
+        </ul>
+
+    </fieldset>
+    </form>
+
+    
+</body>
+</html>
