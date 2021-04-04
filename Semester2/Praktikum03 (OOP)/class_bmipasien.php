@@ -1,28 +1,25 @@
-<?php
 
-$nama=$_POST['nama'];
-$umur=$_POST['umur'];
-$berat_b=$_POST['berat_b'];
-$tinggi_b=$_POST['tinggi_b'];
-$kelamin=$_POST['kelamin'];
-$nomor=1;
+<?php
 
 
 class BmiPasien {
     public $nama;
     public $umur;
-    public $jenis_kelamin;
+    public $jk;
     public $berat;
     public $tinggi;
 
-    function __construct($berat, $tinggi){
+    function __construct($nama, $umur, $jk, $berat, $tinggi){
+        $this->nama = $nama;
+        $this->umur = $umur;
+        $this->jk = $jk;
         $this->berat = $berat;
         $this->tinggi = $tinggi;
     }
 
     public function hasilBMI(){
         $tinggi_meter = $this->tinggi/100;
-        $this->bmi = round($this->berat / pow($tinggi_meter,2));
+        $this->bmi = number_format($this->berat / pow($tinggi_meter,2), 2, '.', ',');
         return $this->bmi;
     }
 
@@ -40,6 +37,8 @@ class BmiPasien {
 
 }
 
-$bmi1 = new BmiPasien($berat_b, $tinggi_b);
+
+
+
 
 ?>
