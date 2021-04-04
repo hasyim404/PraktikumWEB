@@ -32,7 +32,7 @@
     }
 </style>
 <body>
-<form class="form-inline inputan" method="post" action="output.php">
+<form class="form-inline inputan" method="post" action="output.php" >
 <div class="jumbotron jumbotron-fluid jumb">
     <div class="container">
         <h4 class="judul">Form Indeks Massa Tubuh (BMI)</h3>
@@ -57,7 +57,7 @@
             <div class="input-group input-group-default mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-weight"></i></span>
-                </div><input type="text" class="form-control" name="berat_b">
+                </div><input type="text" class="form-control" name="berat">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Kg</span>
                 </div>
@@ -68,7 +68,7 @@
             <div class="input-group input-group-default mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-text-height"></i></i></span>
-                </div><input type="text" class="form-control" name="tinggi_b">
+                </div><input type="text" class="form-control" name="tinggi">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">cm</span>
                 </div>
@@ -76,9 +76,9 @@
         </div>
         <div class="form-group mx-sm-3 mb-2">
         <label style="padding-right: 98px;">Jenis Kelamin</label>
-            <input class="form-check-input" type="radio" name="kelamin" value="Laki-laki">
+            <input class="form-check-input" type="radio" name="jk" value="Laki-laki">
             <label class="form-check-label geser">Laki-Laki</label>
-            <input class="form-check-input" type="radio" name="kelamin" value="Perempuan">
+            <input class="form-check-input" type="radio" name="jk" value="Perempuan">
             <label class="form-check-label">Perempuan</label>
         </div>
         <div class="d-flex justify-content-center">
