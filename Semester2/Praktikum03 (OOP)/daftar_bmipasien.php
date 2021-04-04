@@ -2,10 +2,10 @@
     require 'class_bmipasien.php';
 
     $data_bmi = [
-        ['nama' => 'Ismaill', 'umur' => 19, 'jk' => 'Lakilaki', 'berat' => 61, 'tinggi' => 171],
+        ['nama' => 'Ismaill', 'umur' => 19, 'jk' => 'Laki-laki', 'berat' => 61, 'tinggi' => 171],
         ['nama' => 'Barbara', 'umur' => 15, 'jk' => 'Perempuan', 'berat' => 43, 'tinggi' => 160],
         ['nama' => 'Barbatros', 'umur' => 28, 'jk' => 'Laki-laki', 'berat' => 63, 'tinggi' => 150],
-        ['nama' => 'Barbarian', 'umur' => 45, 'jk' => 'Laki-laki', 'berat' => 80, 'tinggi' => 181],
+        ['nama' => 'Barbarian', 'umur' => 45, 'jk' => 'Laki-laki', 'berat' => 120, 'tinggi' => 181],
     ];
     $nomor=1;
 ?>
